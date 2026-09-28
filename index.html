@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PaceBridge Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #0d6efd;
+    --border: #e5e5e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6e6e6; --muted: #9aa0a6; --border: #2a2f36; }
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+  a { color: var(--accent); }
+  .lang-switch { margin-bottom: 1.5rem; font-size: 0.9rem; }
+  .lang-switch a { margin-right: 8px; }
+  ul { padding-left: 1.25rem; }
+</style>
+</head>
+<body>
+  <div class="lang-switch"><a href="index.html">English</a> | <a href="ru.html">Русский</a></div>
+
+  <h1>PaceBridge Privacy Policy</h1>
+  <p class="updated">Last updated: 28 September 2026</p>
+
+  <p>This policy describes what PaceBridge (package <code>dev.pacebridge</code>)
+  does with your data in the current version of the app.</p>
+
+  <h2>Summary</h2>
+  <p>PaceBridge does not collect, transmit, or share any personal data.
+  Everything the app stores lives only on your device.</p>
+
+  <h2>What the app stores</h2>
+  <ul>
+    <li>Workout data you create in the app, or import from a JSON file you
+    choose, is saved in a local database on your device (Android Room,
+    private app storage).</li>
+    <li>Your theme (System/Light/Dark) and language (System/English/Russian)
+    choices are saved locally in app preferences on your device.</li>
+  </ul>
+  <p>None of this data leaves your device. The app does not have a server,
+  does not make network requests, and does not request the Android
+  <code>INTERNET</code> permission.</p>
+
+  <h2>What the app does not do</h2>
+  <ul>
+    <li>No account or sign-in is required to use the app.</li>
+    <li>No analytics, crash reporting, or advertising SDKs are included.</li>
+    <li>No data is sent to PaceBridge's developer, to Huawei, or to any
+    other third party.</li>
+    <li>No location, contacts, camera, microphone, or similar sensitive
+    permissions are requested.</li>
+  </ul>
+
+  <h2>Importing and exporting files</h2>
+  <p>PaceBridge can import a workout JSON file and export a workout to a
+  JSON file. Both actions use the Android system file picker (Storage
+  Access Framework): you explicitly choose the file to read or the
+  location to save to each time. The app does not browse your files on its
+  own and does not request broad storage permissions.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Settings → clear local data removes everything the app has stored,
+  after an in-app confirmation. Uninstalling the app also removes all of
+  its local data, as with any Android app.</p>
+
+  <h2>Huawei Health integration (not available in this version)</h2>
+  <p>The app has a "Huawei Health" screen that currently and honestly
+  reports the feature as unavailable. A future version may add the ability
+  to send a workout to Huawei Health via Huawei's Health Kit, which would
+  require your explicit Huawei ID sign-in and consent at that time. This
+  policy will be updated before that feature is enabled, to describe
+  exactly what is sent and to whom.</p>
+
+  <h2>Children's privacy</h2>
+  <p>PaceBridge does not knowingly collect any data from anyone, including
+  children, because it does not collect data at all.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes — for example, when a future version adds
+  network functionality — the "Last updated" date above will change and
+  the new version will describe the new behavior before it ships.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy:
+  <a href="mailto:sergey.sklyarov@gmail.com">sergey.sklyarov@gmail.com</a></p>
+</body>
+</html>
