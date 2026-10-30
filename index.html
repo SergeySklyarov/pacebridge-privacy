@@ -38,93 +38,66 @@
   <div class="lang-switch"><a href="index.html">English</a> | <a href="ru.html">Русский</a></div>
 
   <h1>PaceBridge Privacy Policy</h1>
-  <p class="updated">Last updated: 2 October 2026</p>
+  <p class="updated">Last updated: 30 October 2026</p>
 
   <ul>
     <li><strong>App name:</strong> PaceBridge (package <code>dev.pacebridge</code>)</li>
     <li><strong>Developer:</strong> SERGII SKLIAROV</li>
   </ul>
 
-  <p>This policy describes what PaceBridge, developed by SERGII SKLIAROV,
-  does with your data in the current version of the app.</p>
+  <p>This policy describes what PaceBridge, developed by SERGII SKLIAROV, does with your data.</p>
 
   <h2>Summary</h2>
-  <p>PaceBridge does not collect, transmit, or share any personal data.
-  Everything the app stores lives only on your device.</p>
+  <p>PaceBridge works offline, without an account. Your workouts stay on your device unless you yourself sign in with a HUAWEI ID and send a workout to Huawei Health. In that case only that workout goes to Huawei. The developer has no server and receives none of your data.</p>
+  <p>Version 0.2.0 and earlier do not connect to the internet at all.</p>
 
-  <h2>What the app stores</h2>
+  <h2>What the app stores on your device</h2>
   <ul>
-    <li>Workout data you create in the app, or import from a JSON file you
-    choose, is saved in a local database on your device (Android Room,
-    private app storage).</li>
-    <li>Your theme (System/Light/Dark) and language (System/English/Russian)
-    choices are saved locally in app preferences on your device.</li>
+    <li>Workouts you create in the app, or import from a JSON file you choose, in a local database (Android Room, private app storage).</li>
+    <li>Your theme (System/Light/Dark) and language (System/English/Russian) choices, in app preferences.</li>
+    <li><strong>If you sign in:</strong> the access token Huawei issues and an identifier of your account. They are encrypted with a key kept in the Android Keystore and excluded from backups. The token works for about an hour; after that you sign in again. The app does not ask for or keep a refresh token. Your HUAWEI ID password is entered on Huawei's page in your browser, and the app never sees it.</li>
+    <li><strong>If you send a workout:</strong> a send record, so that the same version is not sent twice. It holds the workout's ID, your account identifier, the course ID returned by Huawei, a fingerprint (hash) of what was sent, and the time.</li>
   </ul>
-  <p>None of this data leaves your device. The app does not have a server,
-  does not make network requests, and does not request the Android
-  <code>INTERNET</code> permission.</p>
+
+  <h2>Sending a workout to Huawei Health</h2>
+  <p>Sending is optional, and nothing is sent automatically or in the background.</p>
+  <ul>
+    <li><strong>What is sent:</strong> only the workout you select and confirm: its date and name, notes, and stages (each with its role, a time or distance target, and a pace range), plus your access token to authorize the request.</li>
+    <li><strong>What is requested:</strong> permission to write training plans (<code>healthplan.write</code>) and the basic sign-in permission (<code>openid</code>).</li>
+    <li><strong>What is not read:</strong> the app reads no data from Huawei Health: no health, fitness, activity or profile data.</li>
+    <li><strong>When:</strong> only after you sign in with your HUAWEI ID and agree on Huawei's page, and only when you confirm sending a workout.</li>
+    <li><strong>Why:</strong> to show that workout in Huawei Health, from where it can sync to your watch.</li>
+    <li><strong>Who receives it:</strong> Huawei only. The app connects directly to Huawei's sign-in and Health Service Kit services. The developer does not receive or store this data. Huawei handles it under its own terms and privacy policy, including where it is stored, which may be outside your country.</li>
+  </ul>
 
   <h2>What the app does not do</h2>
   <ul>
-    <li>No account or sign-in is required to use the app.</li>
-    <li>No analytics, crash reporting, or advertising SDKs are included.</li>
-    <li>No data is sent to the developer (SERGII SKLIAROV), to Huawei, or
-    to any other third party.</li>
-    <li>No location, contacts, camera, microphone, or similar sensitive
-    permissions are requested.</li>
+    <li>No account or sign-in is needed to use the app, only to send workouts.</li>
+    <li>No analytics, crash reporting or advertising SDKs are included.</li>
+    <li>No data is sent to the developer (SERGII SKLIAROV) or to any third party other than Huawei as described above.</li>
+    <li>No location, contacts, camera, microphone or similar sensitive permissions are requested. The only network permission, <code>INTERNET</code>, is used for signing in and sending.</li>
   </ul>
 
   <h2>Importing and exporting files</h2>
-  <p>PaceBridge can import a workout JSON file and export a workout to a
-  JSON file. Both actions use the Android system file picker (Storage
-  Access Framework): you explicitly choose the file to read or the
-  location to save to each time. The app does not browse your files on its
-  own and does not request broad storage permissions.</p>
+  <p>PaceBridge can import a workout JSON file and export a workout to a JSON file. Both actions use the Android system file picker (Storage Access Framework): you explicitly choose the file to read or the location to save to each time. The app does not browse your files on its own and does not request broad storage permissions.</p>
 
-  <h2>Deleting your data</h2>
-  <p>Settings → clear local data removes everything the app has stored,
-  after an in-app confirmation. Uninstalling the app also removes all of
-  its local data, as with any Android app.</p>
-
-  <h2>Huawei Health integration (planned, not available in this version)</h2>
-  <p>Sending workouts to Huawei Health is a planned feature. <strong>This
-  version of PaceBridge does not send anything to Huawei Health or to any
-  other service.</strong> The app's watch export screen only reports that the
-  feature is unavailable.</p>
-  <p>When the feature is added in a future version, this is how it will
-  work:</p>
+  <h2>Deleting your data and withdrawing access</h2>
   <ul>
-    <li><strong>What is sent:</strong> only the workout that you yourself
-    select and choose to send: its name, description, and steps (each with a
-    time or distance target and a pace range). Nothing else from the app is
-    sent.</li>
-    <li><strong>What is not read:</strong> the app will not read any data
-    from Huawei Health (no health, fitness, activity, or profile data).</li>
-    <li><strong>When:</strong> only after you sign in with your Huawei ID and
-    explicitly agree, and only when you choose to send a workout.</li>
-    <li><strong>Why:</strong> to show that workout in Huawei Health and on
-    your watch.</li>
-    <li><strong>Storage:</strong> the developer does not store this data on
-    any server of their own (PaceBridge has no servers). The workout goes
-    from your device to Huawei Health, where it is handled under Huawei's own
-    privacy terms.</li>
-    <li><strong>Updates:</strong> this policy will be updated, with the exact
-    data types and purposes, before the feature is enabled.</li>
+    <li><strong>On this device:</strong> Settings → clear local data removes all workouts, send records and the sign-in, after an in-app confirmation. Deleting one workout removes it and its send record. Uninstalling the app removes all of its local data.</li>
+    <li><strong>Signing out</strong> on the watch export screen removes the sign-in from this device only.</li>
+    <li><strong>At Huawei:</strong> workouts you have sent stay in your account after any of the above, and PaceBridge cannot remove them. Delete them in Huawei Health, in the course's menu.</li>
+    <li><strong>To withdraw the app's access,</strong> use your HUAWEI ID account settings (on a Huawei phone: Settings → HUAWEI ID → Privacy center → Control account access).</li>
   </ul>
 
   <h2>Children's privacy</h2>
-  <p>PaceBridge does not knowingly collect any data from anyone, including
-  children, because it does not collect data at all.</p>
+  <p>The developer does not collect data from anyone, including children. Using a HUAWEI ID is subject to Huawei's own age rules.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If this policy changes — for example, when a future version adds
-  network functionality — the "Last updated" date above will change and
-  the new version will describe the new behavior before it ships.</p>
+  <p>If this policy changes, the "Last updated" date above will change, and the new version will describe the new behavior before it ships.</p>
 
   <h2>Contact</h2>
   <p>App: PaceBridge<br>
   Developer: SERGII SKLIAROV<br>
-  Questions about this policy:
-  <a href="mailto:sergey.sklyarov@gmail.com">sergey.sklyarov@gmail.com</a></p>
+  Questions about this policy: <a href="mailto:sergey.sklyarov@gmail.com">sergey.sklyarov@gmail.com</a></p>
 </body>
 </html>
